@@ -11,15 +11,5 @@
   "license": "MIT",
   "dependencies": {
     "jquery": ">=1.7"
-  },
-  "ignore": [
-    "demo/",
-    "prettify/",
-    "screenshots/",
-    "**/.*",
-    "*.md",
-    "*.html",
-    "*.css",
-    "*.js"
-  ]
+  }
 }
