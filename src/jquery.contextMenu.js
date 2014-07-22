@@ -259,7 +259,7 @@ var // currently active contextMenu trigger
                     op.create(e.data);
                 }
                 // show menu
-                op.show.call($this, e.data, e.pageX, e.pageY);
+                op.show.call($this, e.data, e.pageX, e.pageY, e);
             }
         },
         // contextMenu left-click trigger
@@ -785,7 +785,7 @@ var // currently active contextMenu trigger
     },
     // operations
     op = {
-        show: function(opt, x, y) {
+        show: function(opt, x, y, event) {
             var $trigger = $(this),
                 offset,
                 css = {};
@@ -797,7 +797,7 @@ var // currently active contextMenu trigger
             opt.$trigger = $trigger;
 
             // show event
-            if (opt.events.show.call($trigger, opt) === false) {
+            if (opt.events.show.call($trigger, opt, event) === false) {
                 $currentTrigger = null;
                 return;
             }
