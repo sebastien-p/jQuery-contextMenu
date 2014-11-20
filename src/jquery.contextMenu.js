@@ -1388,7 +1388,7 @@ $.contextMenu = function(operation, options) {
                 });
                 
                 namespaces = {};
-                menus = {};
+                $.contextMenu.menus = menus = {};
                 counter = 0;
                 initialized = false;
                 
